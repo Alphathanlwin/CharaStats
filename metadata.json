@@ -1,0 +1,6 @@
+{
+  "name": "CharaStat",
+  "description": "Cross-universe anime battle simulator featuring main characters from over 30 iconic anime series with hardcoded combat stats and avatars.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

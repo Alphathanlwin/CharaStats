@@ -1,0 +1,177 @@
+{
+  "goku": {
+    "name": "Goku",
+    "image": "https://media.kitsu.app/characters/images/68743/original.jpg",
+    "src": "kitsu"
+  },
+  "saitama": {
+    "name": "Saitama",
+    "image": "https://media.kitsu.app/characters/images/57048/original.jpg",
+    "src": "kitsu"
+  },
+  "naruto": {
+    "name": "Naruto Uzumaki",
+    "image": "https://media.kitsu.app/characters/images/221/original.jpg",
+    "src": "kitsu"
+  },
+  "luffy": {
+    "name": "Luffy Monkey D.",
+    "image": "https://media.kitsu.app/characters/images/411/original.jpg",
+    "src": "kitsu"
+  },
+  "ichigo": {
+    "name": "Ichigo Kurosaki",
+    "image": "https://media.kitsu.app/characters/images/5451/original.jpg",
+    "src": "kitsu"
+  },
+  "gojo": {
+    "name": "Satoru",
+    "image": "https://media.kitsu.app/characters/images/88911/original.jpg",
+    "src": "kitsu"
+  },
+  "eren": {
+    "name": "Yeager",
+    "image": "https://media.kitsu.app/characters/images/25254/original.jpg",
+    "src": "kitsu"
+  },
+  "jinwoo": {
+    "name": "Woo Jin",
+    "image": "https://media.kitsu.app/characters/images/88491/original.jpg",
+    "src": "kitsu"
+  },
+  "rimuru": {
+    "name": "Rimuru Tempest",
+    "image": "https://media.kitsu.app/characters/images/63774/original.jpg",
+    "src": "kitsu"
+  },
+  "deku": {
+    "name": "Izuku Midoriya",
+    "image": "https://media.kitsu.app/characters/images/61663/original.jpg",
+    "src": "kitsu"
+  },
+  "tanjiro": {
+    "name": "Tanjirou Kamado",
+    "image": "https://media.kitsu.app/characters/images/75716/original.jpg",
+    "src": "kitsu"
+  },
+  "gon": {
+    "name": "Gon Freecss",
+    "image": "https://media.kitsu.app/characters/images/2816/original.jpg",
+    "src": "kitsu"
+  },
+  "edward": {
+    "name": "Edward Elric",
+    "image": "https://media.kitsu.app/characters/images/2536/original.jpg",
+    "src": "kitsu"
+  },
+  "jotaro": {
+    "name": "Joutarou Kuujou",
+    "image": "https://media.kitsu.app/characters/images/9483/original.jpg",
+    "src": "kitsu"
+  },
+  "mob": {
+    "name": "Shigeo Kageyama",
+    "image": "https://media.kitsu.app/characters/images/66790/original.jpg",
+    "src": "kitsu"
+  },
+  "asta": {
+    "name": "Asta",
+    "image": "https://media.kitsu.app/characters/images/90763/original.jpg",
+    "src": "kitsu"
+  },
+  "alucard": {
+    "name": "Alucard",
+    "image": "https://media.kitsu.app/characters/images/31437/original.jpg",
+    "src": "kitsu"
+  },
+  "simon": {
+    "name": "Simon",
+    "image": "https://media.kitsu.app/characters/images/71529/original.jpg",
+    "src": "kitsu"
+  },
+  "guts": {
+    "name": "Guts",
+    "image": "https://media.kitsu.app/characters/images/1173/original.jpg",
+    "src": "kitsu"
+  },
+  "denji": {
+    "name": "Denji",
+    "image": "https://media.kitsu.app/characters/images/16330/original.jpg",
+    "src": "kitsu"
+  },
+  "kaneki": {
+    "name": "Ken Kaneki",
+    "image": "https://media.kitsu.app/characters/images/48622/original.jpg",
+    "src": "kitsu"
+  },
+  "shinra": {
+    "name": "Shinra Kusakabe",
+    "image": "https://media.kitsu.app/characters/images/64860/original.jpg",
+    "src": "kitsu"
+  },
+  "meliodas": {
+    "name": "Meliodas",
+    "image": "https://media.kitsu.app/characters/images/52950/original.jpg",
+    "src": "kitsu"
+  },
+  "spike": {
+    "name": "Spike Spiegel",
+    "image": "https://media.kitsu.app/characters/images/2/original.jpg",
+    "src": "kitsu"
+  },
+  "thorfinn": {
+    "name": "Thorfinn",
+    "image": "https://media.kitsu.app/characters/images/43535/original.jpg",
+    "src": "kitsu"
+  },
+  "yusuke": {
+    "name": "Yuusuke Urameshi",
+    "image": "https://media.kitsu.app/characters/images/6878/original.jpg",
+    "src": "kitsu"
+  },
+  "inuyasha": {
+    "name": "Inuyasha",
+    "image": "https://media.kitsu.app/characters/images/5109/original.jpg",
+    "src": "kitsu"
+  },
+  "kenshin": {
+    "name": "Kenshin Himura",
+    "image": "https://media.kitsu.app/characters/images/1206/original.jpg",
+    "src": "kitsu"
+  },
+  "shinichi": {
+    "name": "Shinichi Izumi",
+    "image": "https://media.kitsu.app/characters/images/42617/original.jpg",
+    "src": "kitsu"
+  },
+  "natsu": {
+    "name": "Natsu Dragneel",
+    "image": "https://media.kitsu.app/characters/images/29657/original.jpg",
+    "src": "kitsu"
+  },
+  "kirito": {
+    "name": "Aki Kirito",
+    "image": "https://media.kitsu.app/characters/images/50393/original.jpg",
+    "src": "kitsu"
+  },
+  "lelouch": {
+    "name": "Lelouch Lamperouge",
+    "image": "https://media.kitsu.app/characters/images/16460/original.jpg",
+    "src": "kitsu"
+  },
+  "saber": {
+    "name": "Arthur Pendragon",
+    "image": "https://media.kitsu.app/characters/images/63397/original.jpg",
+    "src": "kitsu"
+  },
+  "light": {
+    "name": "Light Yagami",
+    "image": "https://media.kitsu.app/characters/images/15788/original.jpg",
+    "src": "kitsu"
+  },
+  "shinji": {
+    "name": "Shinji Ikari",
+    "image": "https://media.kitsu.app/characters/images/1153/original.jpg",
+    "src": "kitsu"
+  }
+}
