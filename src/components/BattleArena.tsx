@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { Character, BattleResult } from '../types';
 import { FighterCard } from './FighterCard';
+import { FightAnimationStage } from './FightAnimationStage';
 import { soundManager } from '../utils/soundEffects';
 
 interface BattleArenaProps {
@@ -29,6 +30,7 @@ interface BattleArenaProps {
   onRandomP1: () => void;
   onRandomP2: () => void;
   onSwapFighters: () => void;
+  pixelMode?: boolean;
 }
 
 export function BattleArena({
@@ -40,6 +42,7 @@ export function BattleArena({
   onRandomP1,
   onRandomP2,
   onSwapFighters,
+  pixelMode = true,
 }: BattleArenaProps) {
   const [isSimulating, setIsSimulating] = useState(false);
   const [activeRoundIndex, setActiveRoundIndex] = useState<number>(-1); // -1: not started, 0-5: rounds, 6: finished
@@ -120,6 +123,22 @@ export function BattleArena({
 
   return (
     <div className="space-y-6">
+      {/* RETRO ARCADE FIGHT ANIMATION STAGE */}
+      <FightAnimationStage
+        p1={p1}
+        p2={p2}
+        result={result}
+        activeRoundIndex={activeRoundIndex}
+        isSimulating={isSimulating}
+        onRoundChange={(idx) => setActiveRoundIndex(idx)}
+        onBattleFinish={() => {
+          setActiveRoundIndex(result.rounds.length);
+          setIsSimulating(false);
+          soundManager.playVictory();
+          triggerConfetti();
+        }}
+      />
+
       {/* Fighters Versus Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 items-stretch">
         {/* Player 1 Card */}
@@ -130,6 +149,7 @@ export function BattleArena({
             onChangeClick={onChangeP1}
             onRandomClick={onRandomP1}
             isWinner={isBattleFinished && result.overallWinner === 'p1'}
+            pixelMode={pixelMode}
           />
         </div>
 
@@ -222,6 +242,7 @@ export function BattleArena({
             onChangeClick={onChangeP2}
             onRandomClick={onRandomP2}
             isWinner={isBattleFinished && result.overallWinner === 'p2'}
+            pixelMode={pixelMode}
           />
         </div>
       </div>

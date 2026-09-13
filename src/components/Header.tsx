@@ -1,4 +1,4 @@
-import { Swords, Volume2, VolumeX, Shuffle, Users, BarChart3 } from 'lucide-react';
+import { Swords, Volume2, VolumeX, Shuffle, Users, BarChart3, Gamepad2 } from 'lucide-react';
 import { soundManager } from '../utils/soundEffects';
 
 interface HeaderProps {
@@ -7,6 +7,8 @@ interface HeaderProps {
   onRandomMatchup: () => void;
   soundEnabled: boolean;
   setSoundEnabled: (val: boolean) => void;
+  pixelMode: boolean;
+  setPixelMode: (val: boolean) => void;
 }
 
 export function Header({
@@ -15,11 +17,18 @@ export function Header({
   onRandomMatchup,
   soundEnabled,
   setSoundEnabled,
+  pixelMode,
+  setPixelMode,
 }: HeaderProps) {
   const toggleSound = () => {
     const newState = soundManager.toggle();
     setSoundEnabled(newState);
     if (newState) soundManager.playSelect();
+  };
+
+  const togglePixelMode = () => {
+    soundManager.playSelect();
+    setPixelMode(!pixelMode);
   };
 
   return (
@@ -49,6 +58,18 @@ export function Header({
 
             {/* Mobile Sound & Random Controls */}
             <div className="flex items-center gap-1.5 md:hidden">
+              <button
+                id="mobile-pixel-toggle"
+                onClick={togglePixelMode}
+                className={`p-2 rounded-lg border text-xs font-mono font-bold ${
+                  pixelMode
+                    ? 'bg-amber-500/20 border-amber-500/50 text-amber-300'
+                    : 'bg-slate-900 border-slate-800 text-slate-400'
+                }`}
+                title={pixelMode ? 'Switch to HD Anime Avatars' : 'Switch to Retro Pixel Art'}
+              >
+                <Gamepad2 className="w-4 h-4" />
+              </button>
               <button
                 id="mobile-sound-toggle"
                 onClick={toggleSound}
@@ -125,6 +146,20 @@ export function Header({
 
             {/* Desktop Actions */}
             <div className="hidden md:flex items-center gap-2">
+              <button
+                id="desktop-pixel-toggle-btn"
+                onClick={togglePixelMode}
+                className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-xl border transition-all ${
+                  pixelMode
+                    ? 'bg-amber-500/20 border-amber-500/50 text-amber-300 shadow-md shadow-amber-500/10'
+                    : 'bg-slate-900 hover:bg-slate-800 border-slate-800 text-slate-400 hover:text-slate-200'
+                }`}
+                title={pixelMode ? 'Switch to HD Anime Portraits' : 'Switch to Retro Pixel Art Sprites'}
+              >
+                <Gamepad2 className="w-3.5 h-3.5" />
+                <span>{pixelMode ? 'Pixel Mode: ON' : 'Pixel Mode: OFF'}</span>
+              </button>
+
               <button
                 id="desktop-random-matchup-btn"
                 onClick={() => {

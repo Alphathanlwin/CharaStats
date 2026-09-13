@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Character } from '../types';
+import { PixelFighter } from './PixelFighter';
 
 interface CharacterAvatarProps {
   character: Character;
   size?: 'sm' | 'md' | 'lg' | 'xl';
   showGlow?: boolean;
+  pixelMode?: boolean;
   className?: string;
 }
 
@@ -12,6 +14,7 @@ export function CharacterAvatar({
   character,
   size = 'md',
   showGlow = false,
+  pixelMode = false,
   className = '',
 }: CharacterAvatarProps) {
   const [imageError, setImageError] = useState(false);
@@ -48,7 +51,15 @@ export function CharacterAvatar({
           : undefined,
       }}
     >
-      {!imageError && character.avatar ? (
+      {pixelMode ? (
+        <div className="w-full h-full flex items-center justify-center bg-slate-900/95 p-1">
+          <PixelFighter
+            character={character}
+            size={size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm'}
+            showAura={showGlow}
+          />
+        </div>
+      ) : !imageError && character.avatar ? (
         <img
           src={character.avatar}
           alt={character.name}
@@ -84,3 +95,4 @@ export function CharacterAvatar({
     </div>
   );
 }
+

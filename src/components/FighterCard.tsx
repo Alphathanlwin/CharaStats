@@ -9,6 +9,7 @@ interface FighterCardProps {
   onChangeClick: () => void;
   onRandomClick: () => void;
   isWinner?: boolean;
+  pixelMode?: boolean;
 }
 
 export function FighterCard({
@@ -17,6 +18,7 @@ export function FighterCard({
   onChangeClick,
   onRandomClick,
   isWinner,
+  pixelMode = false,
 }: FighterCardProps) {
   const isP1 = player === 'p1';
   const label = isP1 ? 'PLAYER 1 (YOU)' : 'PLAYER 2 (OPPONENT)';
@@ -76,7 +78,7 @@ export function FighterCard({
 
         {/* Character Visual Profile */}
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
-          <CharacterAvatar character={character} size="xl" showGlow={isWinner} />
+          <CharacterAvatar character={character} size="xl" showGlow={isWinner} pixelMode={pixelMode} />
 
           <div className="flex-1 min-w-0">
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">

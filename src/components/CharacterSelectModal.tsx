@@ -12,6 +12,7 @@ interface CharacterSelectModalProps {
   title: string;
   selectedCharacterId: string;
   opponentCharacterId: string;
+  pixelMode?: boolean;
 }
 
 export function CharacterSelectModal({
@@ -21,6 +22,7 @@ export function CharacterSelectModal({
   title,
   selectedCharacterId,
   opponentCharacterId,
+  pixelMode = false,
 }: CharacterSelectModalProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTier, setSelectedTier] = useState<string>('All');
@@ -175,7 +177,7 @@ export function CharacterSelectModal({
                   }`}
                 >
                   <div className="flex items-start gap-3">
-                    <CharacterAvatar character={char} size="md" />
+                    <CharacterAvatar character={char} size="md" pixelMode={pixelMode} />
 
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-1">

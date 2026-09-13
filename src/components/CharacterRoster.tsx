@@ -10,6 +10,7 @@ interface CharacterRosterProps {
   currentP2: Character;
   onSelectP1: (char: Character) => void;
   onSelectP2: (char: Character) => void;
+  pixelMode?: boolean;
 }
 
 export function CharacterRoster({
@@ -17,6 +18,7 @@ export function CharacterRoster({
   currentP2,
   onSelectP1,
   onSelectP2,
+  pixelMode = false,
 }: CharacterRosterProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [tierFilter, setTierFilter] = useState('All');
@@ -148,7 +150,7 @@ export function CharacterRoster({
             >
               <div>
                 <div className="flex items-start gap-3">
-                  <CharacterAvatar character={char} size="lg" />
+                  <CharacterAvatar character={char} size="lg" pixelMode={pixelMode} />
 
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center justify-between gap-1">

@@ -26,6 +26,7 @@ export default function App() {
 
   const [activeTab, setActiveTab] = useState<'arena' | 'matrix' | 'roster'>('arena');
   const [soundEnabled, setSoundEnabled] = useState(true);
+  const [pixelMode, setPixelMode] = useState(true); // Default to retro pixel art mode as requested!
 
   // Modal selector state
   const [selectModalState, setSelectModalState] = useState<{
@@ -102,6 +103,8 @@ export default function App() {
         onRandomMatchup={handleRandomMatchup}
         soundEnabled={soundEnabled}
         setSoundEnabled={setSoundEnabled}
+        pixelMode={pixelMode}
+        setPixelMode={setPixelMode}
       />
 
       {/* Main View Area */}
@@ -134,6 +137,7 @@ export default function App() {
             onRandomP1={handleRandomP1}
             onRandomP2={handleRandomP2}
             onSwapFighters={handleSwapFighters}
+            pixelMode={pixelMode}
           />
         )}
 
@@ -155,6 +159,7 @@ export default function App() {
               setP2(char);
               setActiveTab('arena');
             }}
+            pixelMode={pixelMode}
           />
         )}
       </main>
@@ -181,6 +186,7 @@ export default function App() {
             setP2(selectedChar);
           }
         }}
+        pixelMode={pixelMode}
       />
 
       {/* App Footer */}
